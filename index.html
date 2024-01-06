@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF -8"
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="vieport" content=" width=device-width,
+    initial-scale=1.0">
+    <title>Leo Osayan  
+    </title>
+    <link rel="stylesheet" href ="styles.css">
+    <style>
+        .bordered-text {
+            border: 10px solid black;
+            padding: 10px;
+            display: inline-block;
+        }
+    </style>
+    <script>
+        function updateTimesAndDates() {
+          var manilaOptions = { timeZone: 'Asia/Manila', year: 'numeric', month: 'long', day: 'numeric' };
+          var calgaryOptions = { timeZone: 'America/Edmonton', year: 'numeric', month: 'long', day: 'numeric' };
+          var irelandOptions = { timeZone: 'Europe/Dublin', year: 'numeric', month: 'long', day: 'numeric' };
+    
+          var manilaTime = new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Manila' });
+          var calgaryTime = new Date().toLocaleTimeString('en-US', { timeZone: 'America/Edmonton' });
+          var irelandTime = new Date().toLocaleTimeString('en-US', { timeZone: 'Europe/Dublin' });
+    
+          var manilaDate = new Date().toLocaleDateString('en-US', manilaOptions);
+          var calgaryDate = new Date().toLocaleDateString('en-US', calgaryOptions);
+          var irelandDate = new Date().toLocaleDateString('en-US', irelandOptions);
+    
+          document.getElementById('manila-time').textContent = 'Manila Time: ' + manilaTime + ' | Date: ' + manilaDate;
+          document.getElementById('calgary-time').textContent = 'Calgary Time: ' + calgaryTime + ' | Date: ' + calgaryDate;
+          document.getElementById('ireland-time').textContent = 'Ireland Time: ' + irelandTime + ' | Date: ' + irelandDate;
+        }
+    
+        // Update the times and dates every second
+        setInterval(updateTimesAndDates, 1000);
+    
+        // Initial call to display the times and dates immediately
+        updateTimesAndDates();
+      </script>
+
+</head>
+
+<Body>
+
+    
+
+    <header>
+        <h2 class="logo"> LEO OSAYAN </h2>
+
+
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <button class="btnlogin-popup">Login</button>
+            <div class="time">
+                <p id="manila-time"></p>
+                <p id="calgary-time"></p>
+                <p id="ireland-time"></p>
+            </div>
+
+            
+        </nav>
+
+
+
+    </header>
+
+        
+    <div class="wrapper">
+        <span class="icon-close"><ion-icon name="close"></ion-icon>
+        </span>
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="login.php" method="GET">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" name="remail" required>
+                    <label >Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" name="rpass" required>
+                    <label >Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">
+                    Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="Submit" class="btn">Login
+                </button>
+                <div class="login-register">
+                    <p>Don't have an account?  <a href="#" class="register-link">Register</a></p>
+                </div>
+            </form>
+
+        </div>
+
+        <div class="form-box register">
+            <h2>Registration</h2>
+            <form action="register.php" method="GET">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" name = "rtext" required>
+                    <label >Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" name = "remail" required>
+                    <label >Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" name = "rpass" required>
+                    <label >Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox" required>
+                    I agree to the terms & condition </label>
+                
+                </div>
+                <button type="Submit" class="btn">Register
+                </button>
+                <div class="login-register">
+                    <p>Already have an account?  
+                        <a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+
+        </div>
+
+ 
+
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+
+
+
+</html>
