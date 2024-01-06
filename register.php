@@ -5,9 +5,9 @@
 
     // Database Connection Code
     $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "webpage";
+    $username = "id21755224_lmosayan";
+    $password = "Drag01@2024!";
+    $dbname = "id21755224_web";
 
     $con = mysqli_connect($servername, $username, $password, $dbname);
 
